@@ -40,8 +40,8 @@ _ucidef_set_interface() {
 			static|dhcp|none|pppoe) : ;;
 			*)
 				case "$name" in
-					lan) proto="static" ;;
-					wan) proto="dhcp" ;;
+					lan) proto="dhcp" ;;
+					wan) proto="none" ;;
 					*) proto="none" ;;
 				esac
 			;;

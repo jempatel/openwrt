@@ -1,0 +1,11 @@
+Default Credentials:
+
+Username: root
+Password: x7bedgAz
+
+To build firmware use
+copy defconfig to .config
+
+# cp defconfig .config
+
+make V=99
