@@ -227,9 +227,9 @@ ar71xx_setup_interfaces()
 	ap147-010|\
 	nbg6616|\
 	nbg6716)
-		ucidef_set_interface_lan "eth0 eth1"
-		# ucidef_add_switch "switch0" \
-		#	"0@eth0" "1:lan" "2:lan" "3:lan" "4:lan" "5:lan" "6@eth1"
+		ucidef_set_interfaces_lan_wan "eth0" "eth1"
+		ucidef_add_switch "switch0" \
+			"0@eth0" "1:lan" "2:lan" "3:lan" "4:lan" "5:lan" "6@eth1"
 		;;
 	ap143|\
 	rb-433|\
