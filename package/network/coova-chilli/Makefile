@@ -142,6 +142,7 @@ define Package/coova-chilli/install
 	$(INSTALL_DATA) files/chilli.config $(1)/etc/config/chilli
 	$(INSTALL_DIR) $(1)/lib/firewall
 	$(CP) files/chilli.firewall $(1)/lib/firewall/chilli.sh
+	$(INSTALL_BIN) files/ipup.sh $(1)/etc/chilli/ipup.sh
 endef
 
 $(eval $(call BuildPackage,coova-chilli))
