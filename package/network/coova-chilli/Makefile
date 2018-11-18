@@ -111,6 +111,7 @@ define Build/Configure
 	$(if $(CONFIG_COOVACHILLI_USERAGENT),--enable,--disable)-useragent \
 	$(if $(CONFIG_COOVACHILLI_LARGELIMITS),--enable,--disable)-largelimits \
 	$(if $(CONFIG_COOVACHILLI_UAMDOMAINFILE),--enable,--disable)-uamdomainfile \
+	$(if $(CONFIG_COOVACHILLI_BINSTATFILE),--enable,--disable)-binstatusfile \
 	$(if $(CONFIG_COOVACHILLI_CYASSL),--with,--without)-cyassl \
 	$(if $(CONFIG_COOVACHILLI_OPENSSL),--with,--without)-openssl \
 	$(if $(CONFIG_PACKAGE_kmod-ipt-coova),--with-nfcoova) \
