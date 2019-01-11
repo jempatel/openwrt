@@ -1,0 +1,81 @@
+
+config interface 'loopback'
+	option ifname 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config globals 'globals'
+	option ula_prefix 'fd55:e6b6:a666::/48'
+
+config device 'lan_dev'
+	option name 'eth0.1'
+
+config interface 'wan'
+	option ifname 'eth0.2'
+	option proto 'dhcp'
+
+config device 'wan_dev'
+	option name 'eth0.2'
+
+config switch
+	option name 'switch0'
+	option reset '1'
+	option enable_vlan '1'
+
+config switch_vlan
+	option device 'switch0'
+	option vlan '1'
+	option vid '40'
+	option ports '4 6t'
+
+config switch_vlan
+	option device 'switch0'
+	option vlan '2'
+	option ports '0 6t'
+	option vid '2'
+
+config switch_vlan
+	option device 'switch0'
+	option vlan '3'
+	option ports '2 6t'
+	option vid '20'
+
+config switch_vlan
+	option device 'switch0'
+	option vlan '4'
+	option ports '1 6t'
+	option vid '10'
+
+config switch_vlan
+	option device 'switch0'
+	option vlan '5'
+	option ports '3 6t'
+	option vid '30'
+
+config interface 'tap10'
+	option proto 'none'
+	option type 'bridge'
+	option ifname 'eth0.10 tap10'
+
+config interface 'tap20'
+	option proto 'none'
+	option type 'bridge'
+	option ifname 'eth0.20 tap20'
+
+config interface 'tap30'
+	option proto 'none'
+	option type 'bridge'
+	option ifname 'eth0.30 tap30'
+
+config interface 'tap40'
+	option proto 'none'
+	option type 'bridge'
+	option ifname 'eth0.40 tap40'
+
+config switch_vlan
+	option device 'switch0'
+	option vlan '6'
+	option vid '1'
+	option ports '6t'
+
